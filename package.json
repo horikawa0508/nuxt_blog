@@ -1,0 +1,26 @@
+{
+  "name": "nuzt_blog",
+  "version": "1.0.0",
+  "description": "My hunky-dory Nuxt.js project",
+  "author": "Yuta Horikawa",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "server": "http-server ./docs -o -p 8000"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.10.3",
+    "bootstrap": "^4.4.1",
+    "bootstrap-vue": "^2.13.1",
+    "bootstrap.native": "^2.0.27",
+    "bootstrap.native-loader": "^2.0.0",
+    "http-server": "^0.12.3",
+    "node-sass": "^4.14.1",
+    "nuxt": "^2.0.0",
+    "sass-loader": "^8.0.2"
+  },
+  "devDependencies": {}
+}
