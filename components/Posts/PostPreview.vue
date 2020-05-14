@@ -10,7 +10,7 @@
               <nuxt-link :to="'/posts/page' + id">Continue reading</nuxt-link>
             </div>
             <div class="col-auto d-none d-lg-block">
-              <img class="bd-placeholder-img" width="200" height="250" :src="{ thumbnail }" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect>
+              <img class="bd-placeholder-img" width="200" height="250" :src="thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect>
             </div>
           </div>
       </div>

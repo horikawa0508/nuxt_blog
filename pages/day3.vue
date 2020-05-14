@@ -3,8 +3,8 @@
     <MainTitle/>
     <!-- PostPreview -->
     <div class="row mb-2">
-      <PostPreview id="1" category="Technique"  day="2020/05/13" title="Axios" previewText="Axiosでpostgetしたデータをtableで表示" thumbnail='@assets/images/01.jpg'/>
-      <PostPreview id="2" category="World" day="2020/05/11" title="Mountain" previewText="this is nature!" thumbnail='@assets/images/01.jpg'  />
+      <PostPreview id="1" category="Technique"  day="2020/05/13" title="GET" previewText="AxiosでGETしたデータをテーブルで表示" :thumbnail='img1'/>
+      <PostPreview id="2" category="Technique" day="2020/05/14" title="POST" previewText="AxiosでPOSTしたデータをテーブルで表示" :thumbnail='img2'/>
     </div>
     <!-- end PostPreview -->
 
@@ -33,6 +33,10 @@ export default {
     MainTitle,
   },
   data() {
+    return {
+        img1:require('@/assets/images/01.jpg'),
+        img2:require('@/assets/images/02.jpg'),
+    }
   }
 }
 </script>

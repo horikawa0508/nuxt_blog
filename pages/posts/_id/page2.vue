@@ -1,18 +1,54 @@
 <template>
   <div class="single-post-page">
     <section class="post">
-      <h1 class="post-title">title of the post</h1>
+      <h1 class="post-title">POSTしたデータをテーブル表示</h1>
       <div class="post-details">
         <div class="post-detail">Last update on XXX</div>
         <div class="post-detail">Written by yuta</div>
       </div>
-      <p class="post-content">Content of the post</p>
+      <p class="post-content">POSTしたデータを表示</p>
     </section>
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th>No</th>
+          <th>Title</th>
+          <th>Body</th>
+        </tr>
+      </thead>
+      <tbody class="axios-list">
+        <tr>
+          <th scope="row">{{items.UserId}}</th>
+          <td>{{ items.title }}</td>
+          <td>{{ items.body }}</td>
+        </tr>
+      </tbody>
+    </table>
     <section class="post-feedback">
     <p>Let me message:<a href="mailto:yuta.horikawa@kikagaku.co.jp">yuta.horikawa@kikagaku.co.jp</a></p>
     </section>
   </div>
 </template>
+
+<script>
+import axios from 'axios';
+
+export default {
+  async asyncData() {
+    const url = 'https://jsonplaceholder.typicode.com/posts'
+    const perms = {
+      'UserId':1,
+      'title': 'POSTで表示',
+      'body': 'POST・GETマスター！',
+      }
+    const {data} = await axios.post(url, perms)
+    // console.log(data)
+      return{
+        items: data
+      }
+    }
+}
+</script>
 
 <style scoped>
 .single-post-page {
